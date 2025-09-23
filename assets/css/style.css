@@ -1,0 +1,28 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Buttons */
+.btn-success {
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: bold;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Navbar brand */
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+/* Hero section */
+header h1 {
+  color: #198754;
+}
