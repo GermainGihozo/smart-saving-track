@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="/about.php">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="/member/login.php">Member Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="member/login.php">Member Login</a></li>
         <li class="nav-item"><a class="nav-link" href="admin/login.php">Admin Login</a></li>
       </ul>
     </div>
