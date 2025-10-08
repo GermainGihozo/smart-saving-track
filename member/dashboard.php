@@ -110,6 +110,7 @@ $transactions = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <div class="dashboard-header mb-5">
     <h2>Welcome, <?= htmlspecialchars($member_name) ?> 👋</h2>
     <p>Manage your savings, loans, and repayments effortlessly</p>
+    <a href="../login.php" class="btn btn-danger">Logout</a>
   </div>
 
   <div class="container fade-in">

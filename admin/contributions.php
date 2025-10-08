@@ -3,7 +3,7 @@ session_start();
 require_once "../includes/db.php";
 
 // Protect page: only admin
-if (!isset($_SESSION['admin_id'])) {
+if (!isset($_SESSION['member_id'])) {
     header("Location: login.php");
     exit;
 }
