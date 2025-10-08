@@ -2,13 +2,13 @@
 session_start();
 require_once "../includes/db.php";
 
-// Protect page: only admin
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: login.php");
+// Protect page only admin
+if (!isset($_SESSION['member_id'])) {
+    header("Location: ../login.php");
     exit;
 }
 
-$admin_name = $_SESSION['admin_name'];
+$admin_name = $_SESSION['member_name'];
 
 // Fetch summary statistics
 $total_members = $pdo->query("SELECT COUNT(*) FROM members WHERE role='member'")->fetchColumn();

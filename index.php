@@ -6,7 +6,7 @@
     <h1 class="display-4 fw-bold text-success">Welcome to Smart Saving Track</h1>
     <p class="lead">Your digital solution to manage savings, contributions, and loans with ease & transparency.</p>
     <a href="member/register.php" class="btn btn-success btn-lg me-2">Join as Member</a>
-    <a href="member/login.php" class="btn btn-outline-success btn-lg">Login</a>
+    <a href="login.php" class="btn btn-outline-success btn-lg">Login</a>
   </div>
 </header>
 

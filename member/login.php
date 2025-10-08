@@ -8,30 +8,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $phone = trim($_POST['phone']);
     $password = trim($_POST['password']);
 
-    // Check if the user exists
     $stmt = $pdo->prepare("SELECT * FROM members WHERE phone = ?");
     $stmt->execute([$phone]);
-    $member = $stmt->fetch(PDO::FETCH_ASSOC);
+    $member = $stmt->fetch();
 
     if ($member && password_verify($password, $member['password'])) {
-        // Set session
         $_SESSION['member_id'] = $member['id'];
         $_SESSION['member_name'] = $member['name'];
-        $_SESSION['role'] = $member['role']; // assuming you have a 'role' column in your members table
-
-        // Redirect based on role
-        if ($member['role'] === 'admin') {
-            header("Location: ../admin/dashboard.php");
-        } else {
-            header("Location: dashboard.php");
-        }
+        header("Location: dashboard.php");
         exit;
     } else {
         $error = "Invalid phone number or password.";
     }
 }
 ?>
-
 
 <?php
 //  include "../includes/header.php";
